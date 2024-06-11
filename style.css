@@ -161,11 +161,14 @@ ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 #video video {
     width: 100%;
     height: auto;
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
 }
 
 /* Rodapé */
