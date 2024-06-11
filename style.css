@@ -167,7 +167,7 @@ ul li a:hover {
 #video video {
     width: 100%;
     height: auto;
-    border: 1px solid var(--stroke-color);
+    border: 2px solid var(--stroke-color);
     border-radius: 8px;
 }
 
