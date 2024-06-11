@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="profile">
+            <img src="./assets/profile.png" alt="Foto de perfil">
+            <p>Francisco Ferreira</p>
+        </div>
+
+        <div id="switch" onclick="toggleMode()"> 
+            <button></button>
+            <span></span>
+        </div>
+        
+        <ul>
+            <li>
+                <a href="https://www.instagram.com/francisco_jf/" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="https://www.deviantart.com/franciscofelisbino/gallery" target="_blank">DeviantArt</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/@FranciscoJFF" target="_blank">YouTube</a>
+            </li>
+            <li>
+                <a href="https:/gopro.com/v/2qZOV5OGXO942" target="_blank">GoPro</a>
+            </li>
+        </ul>
+
+        <!-- <div id="social-links"> 
+            <a href="https://www.instagram.com/francisco_jf/" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="https://www.youtube.com/@FranciscoJFF" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+        </div> -->
+        
+        <div id="video">
+            <video width="auto" height="360" controls autoplay muted playsinline>
+                <source src="./assets/GX011093.MP4" type="video/mp4">
+            </video>
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+        <footer>
+            Powered by <a href="https://www.instagram.com/francisco_jf/" target="_blank">Francisco</a>
+        </footer>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

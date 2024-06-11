@@ -1,0 +1,169 @@
+/* Reset de estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Variáveis de tema */
+:root {
+    --text-color: rgb(255, 255, 255);
+    --bg-url: url(./assets/background.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.02);
+    --surface-color-social: rgba(255, 255, 255, 0.02);
+}
+
+.light {
+    --text-color: rgb(0, 0, 0);
+    --bg-url: url(./assets/background_w.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.5);
+    --surface-color: rgba(0, 0, 0, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.02);
+    --surface-color-social: rgba(0, 0, 0, 0.02);
+}
+
+/* Estilos para o corpo da página */
+body {
+    background: var(--bg-url) center;
+}
+
+body * {
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+}
+
+/* Contêiner principal */
+#container {
+    width: 360px;
+    margin: auto;
+    padding-top: 24px;
+}
+
+/* Perfil */
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+/* Interruptor */
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 4px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: white center;
+    border: 0;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.light #switch button {
+    right: 0;
+    left: initial;
+}
+
+#switch span {
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 9999px;
+}
+
+/* Lista de links */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px;
+}
+
+ul li a {
+    border: 1px solid var(--stroke-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 52px;
+    background: var(--surface-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+ul li a:hover {
+    background-color: var(--surface-color-hover);
+    border: 1.5px solid var(--text-color);
+}
+
+/* Links sociais */
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    font-size: 24px;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background: var(--surface-color-social);
+}
+
+/* Video */
+#video {
+    text-align: center;
+    padding: 24px;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+#video video {
+    margin: auto;
+    display: block;
+} 
+
+/* Rodapé */
+footer {
+    padding: 24px 0;
+    text-align: center;
+    font-size: 14px;
+}
