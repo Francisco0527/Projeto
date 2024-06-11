@@ -26,6 +26,9 @@
 /* Estilos para o corpo da página */
 body {
     background: var(--bg-url) center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 body * {
@@ -35,9 +38,13 @@ body * {
 
 /* Contêiner principal */
 #container {
-    width: 360px;
+    display: flex;
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
     margin: auto;
-    padding-top: 24px;
+    padding: 24px;
+    gap: 24px;
 }
 
 /* Perfil */
@@ -143,27 +150,43 @@ ul li a:hover {
     background: var(--surface-color-social);
 }
 
+/* Conteúdo */
+#content {
+    flex: 1;
+}
+
 /* Video */
 #video {
-    text-align: center;
-    padding: 24px;
-    border: 1px solid var(--stroke-color);
-    background: var(--surface-color);
-    border-radius: 8px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    text-decoration: none;
-    transition: background 0.2s;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #video video {
-    margin: auto;
-    display: block;
-} 
+    width: 100%;
+    height: auto;
+}
 
 /* Rodapé */
 footer {
-    padding: 24px 0;
     text-align: center;
     font-size: 14px;
+    padding: 24px 0;
+    background: var(--surface-color);
+    width: 100%;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    #video {
+        order: 1;
+    }
+    #content {
+        order: 0;
+    }
 }
