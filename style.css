@@ -86,8 +86,7 @@ body * {
 }
 
 .light #switch button {
-    right: 0;
-    left: initial;
+    animation: slide-icon 0.4s forwards;
 }
 
 #switch span {
@@ -191,5 +190,15 @@ footer {
     }
     #content {
         order: 0;
+    }
+}
+
+/* Animation */
+@keyframes slide-icon {
+    from {
+        left: 0;
+    }
+    to {
+        right: 50%;
     }
 }
