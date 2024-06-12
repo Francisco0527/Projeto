@@ -10,8 +10,8 @@
     --bg-url: url(./assets/background.jpg);
     --stroke-color: rgba(255, 255, 255, 0.5);
     --surface-color: rgba(255, 255, 255, 0.1);
-    --surface-color-hover: rgba(255, 255, 255, 0.02);
-    --surface-color-social: rgba(255, 255, 255, 0.02);
+    --surface-color-hover: rgba(255, 255, 255, 0.2);
+    --surface-color-social: rgba(255, 255, 255, 0.2);
 }
 
 .light {
@@ -19,8 +19,8 @@
     --bg-url: url(./assets/background_w.jpg);
     --stroke-color: rgba(0, 0, 0, 0.5);
     --surface-color: rgba(0, 0, 0, 0.1);
-    --surface-color-hover: rgba(0, 0, 0, 0.02);
-    --surface-color-social: rgba(0, 0, 0, 0.02);
+    --surface-color-hover: rgba(0, 0, 0, 0.2);
+    --surface-color-social: rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para o corpo da página */
@@ -83,10 +83,15 @@ body * {
     left: 0;
     z-index: 1;
     transform: translateY(-50%);
+    animation: slide-icon-back 0.6s forwards;
 }
 
 .light #switch button {
-    animation: slide-icon 0.4s forwards;
+    animation: slide-icon 0.6s forwards;
+}
+
+#switch button:hover {
+    outline: 8px solid var(--surface-color-hover);
 }
 
 #switch span {
@@ -196,9 +201,18 @@ footer {
 /* Animation */
 @keyframes slide-icon {
     from {
-        left: 0;
+        right: 0;
     }
     to {
-        right: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes slide-icon-back {
+    from {
+        left: 50%;
+    }
+    to {
+        right: 0;
     }
 }
