@@ -10,7 +10,7 @@ Olá! Meu nome é Francisco, seja bem-vindo ao meu projeto.
 
 🎥 GoPro.
 
-💼 PhotoShop.
+🎨 PhotoShop.
 
 ---
 
