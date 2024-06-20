@@ -50,8 +50,6 @@ body * {
     background-size: cover;
     background-position: center;
     z-index: 999; /* Certifique-se de que a imagem fique acima de outros elementos */
-    box-shadow: 0 0px 8px rgb(212, 0, 255);
-    border-radius: 8px;
 }
 
 /* Contêiner principal */
@@ -190,19 +188,78 @@ ul li a:hover {
 #video video {
     width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px rgb(212, 0, 255);
+    box-shadow: 0 4px 8px rgb(212, 0, 255, 0.6);
     border-radius: 8px;
 }
 
+/* Contêiner do YouTube */
+#youtube-container {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    gap: 24px;
+}
+
+/* Estilo para o vídeo do YouTube */
+#youtube-video {
+    flex: 1;
+    min-width: 300px; /* Ajuste conforme necessário */
+    box-shadow: 0 4px 8px rgb(212, 0, 255, 0.6); /* Adiciona uma sombra */
+    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+    overflow: hidden; /* Garante que os cantos arredondados funcionem corretamente */
+}
+
+#youtube-video iframe {
+    width: 100%;
+    height: 315px; /* Ajuste conforme necessário */
+    border: 0; /* Remove a borda padrão */
+    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+}
+
+/* Estilo para as informações do YouTube */
+#youtube-info {
+    flex: 1;
+    border: 1px solid var(--stroke-color);
+    min-width: 100px; /* Ajuste conforme necessário */
+    padding: 16px;
+    background: var(--surface-color);
+    border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+#youtube-info h2 {
+    margin-bottom: 16px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#youtube-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+#youtube-info ul li {
+    margin-bottom: auto;
+    font-size: 24px;
+}
+
 #bottom-image {
-    width: 80%;
+    width: 90%;
     height: 700px;
     background-image: url(./assets/GOPR1070.JPG);
     background-size: cover;
     background-position: center;
     margin: 24px auto;
-    box-shadow: 0 4px 8px rgb(212, 0, 255);
+    box-shadow: 0 4px 8px rgb(212, 0, 255, 0.6);
     border-radius: 8px;
+    filter: grayscale(100%);
 }
 
 /* Rodapé */
@@ -226,6 +283,10 @@ footer {
     }
     #content {
         order: 0;
+    }
+    #youtube-container {
+        flex-direction: column;
+        gap: 16px;
     }
 }
 
